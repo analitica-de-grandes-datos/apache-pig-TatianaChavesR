@@ -36,4 +36,4 @@ resultado = FOREACH datos GENERATE name,color;
 
 selection = FILTER resultado BY NOT ($1 matches '.*b.*');
 
-STORE selection INTO 'output' USING PigStorage('
+STORE selection INTO 'output' USING PigStorage(',');
